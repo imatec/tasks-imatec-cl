@@ -1,0 +1,22 @@
+/**
+ * ImaTec Computación Ltda.
+ * 2011 Santiago, Chile
+ *
+ * Jorge Alvarez Solovioff
+ * jorge.alvarez@imatec.cl
+ * @stratusimatec
+ */
+{
+  "name": "AnaCon Web",
+  "description": "Visualiza datos georeferenciados en un entorno tridimensional. (Prototipo para el proyecto de Memoria de Jorge Álvarez Solovioff)",
+  "version": "1",
+  "app": {
+    "launch": {
+      "local_path": "main.html"
+    }
+  },
+  "icons": {
+    "16": "icon_16.png",
+    "128": "icon_128.png"
+  }
+}

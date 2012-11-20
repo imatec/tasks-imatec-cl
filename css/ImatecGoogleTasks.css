@@ -1,0 +1,32 @@
+.taskStatusToggler, .taskDueDate, .taskDelete{
+    cursor: pointer;
+}
+.taskCompleted{
+    text-decoration: line-through;
+    color: #CCC;
+}
+.icon-gray {
+  opacity: 0.5;
+}
+.icon-gray-up {
+  opacity: 0.75;
+}
+.icon-gray-down {
+  opacity: 0.25;
+}
+.taskTitleHolder{
+    /*word-wrap : break-word;*/
+    cursor: text;
+    /*white-space: pre-wrap;*/
+}
+.taskContainer{
+     border-bottom: 1px #0480be dashed;
+}
+.taskContainer:hover{
+     border-bottom: 1px #0480be dashed;
+     background: #0099dd;
+}
+.taskCount{
+	/*color: #c67605;*/
+	color: #f89406;
+}
