@@ -55,7 +55,7 @@ if (isset($_GET['code'])) {
 <!doctype html>
 <html>
 <head>
-  <title>Tasks (ImaTec/Google) caaambios</title>
+  <title>Tasks (ImaTec/Google)</title>
 
   <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Droid+Serif|Droid+Sans:regular,bold' />
   <!--<link rel='stylesheet' href='css/style_1.css' />-->
@@ -86,7 +86,7 @@ if (isset($_GET['code'])) {
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">ImaTec/Google Tasks</a>
+          <a class="brand" href="#">ImaTec/Google Tasks caaambios</a>
           <div class="nav-collapse collapse">
             <p class="navbar-text pull-right">
               Logged in as <a href="#" class="navbar-link"><?=$response->name?> (<?=$response->email?>)</a>
