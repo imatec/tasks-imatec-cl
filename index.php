@@ -86,7 +86,7 @@ if (isset($_GET['code'])) {
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">ImaTec/Google Tasks probando el auto deploy ahora si</a>
+          <a class="brand" href="#">ImaTec/Google Tasks</a>
           <div class="nav-collapse collapse">
             <p class="navbar-text pull-right">
               Logged in as <a href="#" class="navbar-link"><?=$response->name?> (<?=$response->email?>)</a>
