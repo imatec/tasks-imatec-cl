@@ -22,9 +22,10 @@ $(document).ready(function(){
 		}	
     });
 	$(document).on('keypress', '#newTask', function(e){
-		console.log('pressed ' + e.which);
 		if(e.which == 13 && $.trim($(this).val()) != ''){
-			console.log($(this).val());
+			$.get('addTask.php', {'name' : $(this).val(), 'taskListId' : $(this).attr('taskListId')}, function(){
+				$('#listadelistas').load('displayTasksLists.php');
+			});
 		}
 	});
     $(document).on('blur','div.taskTitleHolder', function(){
