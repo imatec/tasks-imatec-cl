@@ -23,7 +23,7 @@ $(document).ready(function(){
     });
 	$(document).on('keypress', '#newTask', function(e){
 		console.log('pressed ' + e.which);
-		if(e.which == 13 && $.trim($(this).text()) != ''){
+		if(e.which == 13 && $.trim($(this).val()) != ''){
 			console.log($(this).val());
 		}
 	});
