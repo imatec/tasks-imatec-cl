@@ -22,6 +22,7 @@ $(document).ready(function(){
 		}	
     });
 	$(document).on('keypress', '#newTask', function(e){
+		console.log('pressed');
 		if(e.which == 13 && $.trim($(this).text()) != ''){
 			console.log($(this).val());
 		}
