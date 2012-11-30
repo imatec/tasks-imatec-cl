@@ -19,6 +19,7 @@ $(document).ready(function(){
 			$(this).parent().parent().next().find('.taskTitleHolder').focus();*/
 			//$(this).parent().parent().next().find('.taskTitleHolder').children().remove();
 			//$(this).parent().parent().next().find('.taskTitleHolder').trigger(e);
+			/*COmentando*/
 		}	
     });
 	$(document).on('keypress', '#newTask', function(e){
