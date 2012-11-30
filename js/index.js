@@ -63,6 +63,11 @@ $(document).ready(function(){
 			$('[taskId='+$('#taskIdForDelete').val()+']').parent().parent().fadeOut().remove();
 		});
     });
+	
+	$(document).on('click','.tasklist', function(){
+		showTaskList($(this).attr('listid'));
+	});
+	
 	$('.taskDueDate').datepicker();
 	
 });
