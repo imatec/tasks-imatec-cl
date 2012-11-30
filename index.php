@@ -119,7 +119,7 @@ if (isset($_GET['code'])) {
           <!--<div class="hero-unit" id="lasListas">-->
 	  <div class="hide well" id="testArea"><!--<span class="taskDueDate datepicker">datepickerTest</span>--> <input type="text" class="taskDueDate datepicker"></div>
           <div class="well" id="addTaskArea">
-
+			  <input id="newTask" placeholder="ingresa la nueva tarea y presiona ENTER">
           </div>
           <div class="well" id="lasListas">
 
