@@ -23,10 +23,11 @@ $(document).ready(function(){
 		}	
     });
 	$(document).on('keypress', '#newTask', function(e){
+		var listId = $(this).attr('taskListId');
 		if(e.which == 13 && $.trim($(this).val()) != ''){
-			$.get('addTask.php', {'name' : $(this).val(), 'taskListId' : $(this).attr('taskListId')}, function(){
+			$.get('addTask.php', {'name' : $(this).val(), 'taskListId' : listId}, function(){
 				console.log('asdajsdhjashdkajsh');
-				$('#listadelistas').load('displayTasksLists.php');
+				$('#lasListas').load('displayTasksByList.php', {id : listId});
 			});
 		}
 	});
