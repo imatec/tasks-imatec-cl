@@ -21,7 +21,11 @@ $(document).ready(function(){
 			//$(this).parent().parent().next().find('.taskTitleHolder').trigger(e);
 		}	
     });
-	
+	$(document).on('keypress', '#newTask', function(e){
+		if(e.which == 13 && $.trim($(this).text()) != ''){
+			console.log($(this).val());
+		}
+	});
     $(document).on('blur','div.taskTitleHolder', function(){
 	    if($.trim($(this).text()) != ''){
 			$.post('addTask.php',{'taskTitle' : $(this).text(), 'taskListId' : $('input#taskListId').val(), 'taskId' : $(this).attr('taskId')});  
