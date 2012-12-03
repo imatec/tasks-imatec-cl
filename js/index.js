@@ -25,7 +25,8 @@ $(document).ready(function(){
 	$(document).on('keypress', '#newTask', function(e){
 		var listId = $('#taskListId').val();
 		if(e.which == 13 && $.trim($(this).val()) != ''){
-			console.log($(this).val());
+			console.log('||| ' + $(this).va() + ' |||');
+			console.log($(this));
 			$.get('addTask.php', {'taskTitle' : $(this).val(), 'taskListId' : listId}, function(){
 				console.log('asdajsdhjashdkajsh');
 				$('#lasListas').load('displayTasksByList.php', {'id' : listId});
