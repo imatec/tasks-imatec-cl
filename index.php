@@ -23,9 +23,17 @@ error_reporting(E_ALL);
 ini_set('display_errors', '1');
 $client = new apiClient();
 $client->setApplicationName('imatec-tasks01');
-$client->setClientId('65558362391.apps.googleusercontent.com');
-$client->setClientSecret('0b4Z8Uc2PtUmhR6ASgeAFvsy');
-$client->setRedirectUri('http://tasks.imatec.cl/');
+switch ($_SERVER["SERVER_NAME"]) {
+	case 'http://tasks.imatec.cl':
+		$client->setClientId('65558362391.apps.googleusercontent.com');
+		$client->setClientSecret('0b4Z8Uc2PtUmhR6ASgeAFvsy');
+		break;
+	case 'http://tasks-dev.imatec.cl':
+		$client->setClientId('65558362391-dmrhm6ndt1m1lb7i038rbscj7smf8pvt.apps.googleusercontent.com');
+		$client->setClientSecret('sZSOctuqwIF-aRESMdZPDY7a');
+		break;
+}
+$client->setRedirectUri($_SERVER["SERVER_NAME"]);
 $client->setDeveloperKey('AIzaSyB_eCQw6ZAJbw4_okmk-VRxuzn5UB1r2Vw');
 $tasksService = new apiTasksService($client);
 $oauth2Service = new apiOauth2Service($client);
@@ -86,7 +94,7 @@ if (isset($_GET['code'])) {
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">ImaTec/Google Tasks</a>
+          <a class="brand" href="#">ImaTec/Google Tasks HOLA</a>
           <div class="nav-collapse collapse">
             <p class="navbar-text pull-right">
               Logged in as <a href="#" class="navbar-link"><?=$response->name?> (<?=$response->email?>)</a>
